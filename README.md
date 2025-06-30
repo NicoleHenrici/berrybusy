@@ -1,3 +1,22 @@
+### BerryBusy 
+
+**BerryBusy** is your playful PWA to keep group schedules transparent and organized. Whether it's your flat, family, or project team – stay in sync without the stress. One berry at a time.
+
+## Project Status
+
+This project is under active development.  
+**MVP Goal:** Group timetable – see who's available, when, and where.  
+Future features: Meal planning, shared lists, fun extras.
+
+## Tech Stack
+
+- Frontend: React (PWA)
+- Backend: Next.js (API routes)
+- Database: Lightweight to start (e.g., SQLite – easy to swap later)
+- Modular & playful by design
+
+________________
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
