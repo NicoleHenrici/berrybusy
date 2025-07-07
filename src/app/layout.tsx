@@ -30,6 +30,9 @@ export default function RootLayout({
       >
         <MainHeader />
         {children}
+        <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+          © 2025 Berry Busy
+        </footer>
       </body>
     </html>
   );
