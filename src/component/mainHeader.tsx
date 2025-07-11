@@ -32,7 +32,7 @@ export default function MainHeader() {
         <Link href="/settings" className="hover:underline">
           Settings
         </Link>
-        <Link href="/profile" className="hover:underline">
+        <Link href="/profile/userData" className="hover:underline">
           Profile
         </Link>
       </div>
