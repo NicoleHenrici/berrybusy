@@ -8,12 +8,11 @@ export default function SettingsLayout({
   return (
     <main className="flex flex-row h-screen">
       <SideNav
-        navElements={[
-          { href: "/settings/general", label: "General" },
-        ]}
+        navElements={[{ href: "/settings/general", label: "General" }]}
       />
 
       <div className="basis-5/6 p-4">
+        <h1 className="text-2xl font-bold mb-4">Settings</h1>
         {children}
       </div>
     </main>
