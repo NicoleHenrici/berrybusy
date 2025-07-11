@@ -16,6 +16,16 @@ export default function MainHeader() {
               Calendar
             </Link>
           </li>
+          <li>
+            <Link href="/calendar" className="hover:underline">
+              Media
+            </Link>
+          </li>
+          <li>
+            <Link href="/calendar" className="hover:underline">
+              Recipes
+            </Link>
+          </li>
         </ul>
       </nav>
       <div className="flex items-center space-x-4">
