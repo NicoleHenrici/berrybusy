@@ -29,7 +29,7 @@ export default function MainHeader() {
         </ul>
       </nav>
       <div className="flex items-center space-x-4">
-        <Link href="/settings" className="hover:underline">
+        <Link href="/settings/general" className="hover:underline">
           Settings
         </Link>
         <Link href="/profile/userData" className="hover:underline">
