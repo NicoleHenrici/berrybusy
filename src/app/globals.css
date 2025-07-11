@@ -31,6 +31,6 @@ body {
 }
 
 header {
-  background: var(--background);
-  color: var(--baseText);
+  background: var(--brand-accent);
+  color: var(--base-text);
 }
