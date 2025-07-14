@@ -15,6 +15,7 @@ export default function ProfileLayout({
       />
 
       <div className="basis-5/6 p-4">
+        <h1 className="text-2xl font-bold mb-8">Profile</h1>
         {children}
       </div>
     </main>
