@@ -1,8 +1,25 @@
+import Card from "@/component/card";
+
+const settingsSections = [
+  {
+    type: "text",
+    label: "Name",
+    optionLabel: [],
+  },
+  {
+    type: "text-group",
+    label: "Address Information",
+    optionLabel: ["phone", "street", "city", "zip"],
+  },
+];
+
 export default function UserDataPage() {
   return (
-    <>
-      <h1>User Data</h1>
-      <p>This is the user data page.</p>
-    </>
+   <>
+         <Card
+           sections={settingsSections}
+           pageName="User Data Settings"
+         />
+       </>
   );
 }
