@@ -12,7 +12,7 @@ export default function SettingsLayout({
       />
 
       <div className="basis-5/6 p-4">
-        <h1 className="text-2xl font-bold mb-4">Settings</h1>
+        <h1 className="text-2xl font-bold mb-8">Settings</h1>
         {children}
       </div>
     </main>
