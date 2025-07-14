@@ -14,7 +14,7 @@ const settingsSections = [
   {
     type: "number",
     label: "Font Size",
-    optionLabel: ["Small", "Medium", "Large"],
+    optionLabel: [],
   },
 ];
 
@@ -22,9 +22,9 @@ const settingsSections = [
 export default function SettingsGeneralPage() {
   return (
     <>
-      <h2 className="text-lg font-bold mb-2">General Settings</h2>
       <Card
         sections={settingsSections}
+        pageName="General Settings"
       />
     </>
   );
