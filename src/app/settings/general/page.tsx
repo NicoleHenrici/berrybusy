@@ -3,18 +3,26 @@ import Card from "@/component/card";
 const settingsSections = [
   {
     type: "checkbox",
-    label: "Dark Mode",
-    optionLabel: ["Enable Dark Mode"],
+    sectionLabel: "Dark Mode",
+    options: [
+      { label: "Light", placeholder: "", value: "light" },
+      { label: "Dark", placeholder: "", value: "dark" },
+    ],
   },
   {
     type: "checkbox",
-    label: "Color Scheme",
-    optionLabel: ["strawberry", "blueberry"],
+    sectionLabel: "Color Scheme",
+    options: [
+      { label: "strawberry", placeholder: "", value: "strawberry" },
+      { label: "blueberry", placeholder: "", value: "blueberry" },
+    ],
   },
   {
     type: "number",
-    label: "Font Size",
-    optionLabel: [],
+    sectionLabel: "Font Size",
+    options: [
+      { label: "", placeholder: "font size", value: "" },
+    ],
   },
 ];
 
@@ -22,10 +30,13 @@ const settingsSections = [
 export default function SettingsGeneralPage() {
   return (
     <>
-      <Card
-        sections={settingsSections}
-        pageName="General Settings"
-      />
+      <form className="border border-foreground/25 rounded-md m-auto mt-0 w-fit flex flex-col items-end">
+        <Card
+          sections={settingsSections}
+          pageName="General Settings"
+        />
+        <button type="submit" className="btn m-2 bg-brand-primary p-2 text-white rounded-md">Save Changes</button>
+      </form>
     </>
   );
 }
