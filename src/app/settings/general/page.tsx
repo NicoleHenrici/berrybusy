@@ -8,6 +8,7 @@ const settingsSections = [
       { label: "Light", placeholder: "", value: "light" },
       { label: "Dark", placeholder: "", value: "dark" },
     ],
+    expandable: false,
   },
   {
     type: "checkbox",
@@ -16,6 +17,7 @@ const settingsSections = [
       { label: "strawberry", placeholder: "", value: "strawberry" },
       { label: "blueberry", placeholder: "", value: "blueberry" },
     ],
+    expandable: false,
   },
   {
     type: "number",
@@ -23,6 +25,7 @@ const settingsSections = [
     options: [
       { label: "", placeholder: "font size", value: "" },
     ],
+    expandable: false,
   },
 ];
 

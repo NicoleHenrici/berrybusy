@@ -9,6 +9,7 @@ const settingsSections = [
       // value will contain path of active avatar
       { label: "Choosen Avatar", placeholder: "Choose an image file", value: "" },
     ],
+    expandable: false,
   },
   {
     type: "upload",
@@ -16,6 +17,7 @@ const settingsSections = [
     options: [
       { label: "Upload Image", placeholder: "Choose an image file", value: "" },
     ],
+    expandable: false,
   },
 ];
 

@@ -5,6 +5,7 @@ const settingsSections = [
     type: "text",
     sectionLabel: "Name",
     options: [],
+    expandable: false,
   },
   {
     type: "text-group",
@@ -15,6 +16,7 @@ const settingsSections = [
       { label: "city", placeholder: "Enter your city", value: "" },
       { label: "zip", placeholder: "Enter your zip code", value: "" },
     ],
+    expandable: false,
   },
 ];
 
