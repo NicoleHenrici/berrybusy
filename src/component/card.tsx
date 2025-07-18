@@ -1,5 +1,8 @@
+'use client';
 
 import Image from "next/image";
+import { useState } from "react";
+import { FiPlus } from "react-icons/fi";
 
 type Option = {
     label: string;
@@ -11,13 +14,17 @@ type Section = {
     type: string;
     sectionLabel: string;
     options: Option[];
+    expandable: boolean;
 };
 
 type CardProps = {
     sections: Section[];
+    pageName: string;
+    extendListHandler: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, section: Section) => void;
 };
 
-export default function Card({ sections, pageName }: CardProps & { pageName: string }) {
+export default function Card({ sections, pageName, extendListHandler }: CardProps) {
+
     return (
         <>
             <div className="card w-fit">
@@ -37,14 +44,21 @@ export default function Card({ sections, pageName }: CardProps & { pageName: str
                                     <div key={index + '.' + optionIndex} className="form-control p-2  bg-background">
                                         <label className="label cursor-pointer flex justify-start items-center">
                                             <span className="label-text w-95 text-s">{option.label}</span>
-                                            <input type="checkbox" className="checkbox rounded-md ml-4 w-25" id={section.sectionLabel.toLowerCase().replace(/\s+/g, '-') + '-input-' + optionIndex + '-' + section.type} />
+                                            <input
+                                                type="checkbox"
+                                                className="checkbox rounded-md ml-4 w-25"
+                                                id={
+                                                    section.sectionLabel.toLowerCase().replace(/\s+/g, '-') +
+                                                    '-input-' + optionIndex + '-' + section.type
+                                                }
+                                            />
                                         </label>
                                     </div>
                                 ))
                             ) : section.type == "number" || section.type == "text" ? (
                                 <div className="form-control p-2">
                                     <input
-                                        type="number"
+                                        type={`${section.type}`}
                                         className="input border border-brand-accent bg-brand-accent/50 w-full p-1"
                                         id={section.sectionLabel.toLowerCase().replace(/\s+/g, '-') + '-input-' + index + '-' + section.type}
                                         placeholder={section.sectionLabel.toLowerCase()}
@@ -62,6 +76,31 @@ export default function Card({ sections, pageName }: CardProps & { pageName: str
                                             placeholder={field.placeholder}
                                         />
                                     ))}
+                                    {section.expandable && (
+                                        <button
+                                            type="button"
+                                            className="btn m-2 bg-brand-primary p-2 text-white rounded-md"
+                                            onClick={(event) => addInputHandler(event, section)}
+                                        >
+                                            <FiPlus />
+                                        </button>
+                                    )}
+                                </div>
+                            ) : section.type == "textarea-group" ? (
+                                <div className="form-control p-2 ">
+                                    {section.options.map((field, fieldIndex) => (
+                                        <textarea
+                                            key={fieldIndex}
+                                            className="input border border-brand-accent bg-brand-accent/50 p-1 w-full mb-2"
+                                            id={section.sectionLabel.toLowerCase().replace(/\s+/g, '-') + '-input-' + fieldIndex + '-' + section.type}
+                                            placeholder={field.placeholder}
+                                        />
+                                    ))}
+                                    {section.expandable && (
+                                        <button type="button" className="btn m-2 bg-brand-primary p-2 text-white rounded-md" onClick={extendListHandler}>
+                                            <FiPlus />
+                                        </button>
+                                    )}
                                 </div>
                             ) : section.type == "image" ? (
                                 section.options.map((field, fieldIndex) => (
