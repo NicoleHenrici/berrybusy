@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                  // Moderne Node Features
+    "module": "ESNext",                  // Für import/export Syntax
+    "moduleResolution": "node",          // Node-kompatible Modulauflösung
+    "esModuleInterop": true,             // Für default-Imports von CommonJS-Paketen
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                      // Strikte Typprüfung
+    "skipLibCheck": true,
+    "outDir": "dist-scripts",            // Ausgabeverzeichnis
+    "resolveJsonModule": true            // Falls du JSON importierst
+  },
+  "include": ["initdb.ts"]
+}
