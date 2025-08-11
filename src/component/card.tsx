@@ -111,21 +111,23 @@ export default function Card({
                           placeholder={field.placeholder}
                         />
                       </label>
-                      <button
-                        type="button"
-                        className={`btn mb-2 border ${
-                          section.options.length <= 1
-                            ? "border-color-brand-primary/25 text-brand-primary/25"
-                            : "border-color-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
-                        } p-2 rounded-md place-self-center`}
-                        disabled={section.options.length <= 1}
-                        onClick={(e) =>
-                          onDeleteListElement &&
-                          onDeleteListElement(e, section, fieldIndex)
-                        }
-                      >
-                        <FiMinus />
-                      </button>
+                      {section.expandable && (
+                        <button
+                          type="button"
+                          className={`btn mb-2 border ${section.options.length <= 1
+                              ? "border-color-brand-primary/25 text-brand-primary/25"
+                              : "border-color-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
+                            } p-2 rounded-md place-self-center`}
+                          disabled={section.options.length <= 1}
+                          onClick={(e) =>
+                            onDeleteListElement &&
+                            onDeleteListElement(e, section, fieldIndex)
+                          }
+                        >
+                          <FiMinus />
+                        </button>
+                      )}
+
                     </>
                   ))}
                   {section.expandable && (
@@ -172,11 +174,10 @@ export default function Card({
                       </label>
                       <button
                         type="button"
-                        className={`btn mb-2 border ${
-                          section.options.length <= 1
+                        className={`btn mb-2 border ${section.options.length <= 1
                             ? "border-color-brand-primary/25 text-brand-primary/25"
                             : "border-color-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
-                        } p-2 rounded-md place-self-center`}
+                          } p-2 rounded-md place-self-center`}
                         disabled={section.options.length <= 1}
                         onClick={(e) =>
                           onDeleteListElement &&
