@@ -1,4 +1,9 @@
-export default function RecipesOverview() {
+import getRecipes from "@/lib/recipes";
+
+export default async function RecipesOverview() {
+    const recipes = await getRecipes();
+
+    console.log(recipes)
     return (
         <>
             <h1>Overview</h1>
