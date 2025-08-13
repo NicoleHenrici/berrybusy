@@ -22,7 +22,7 @@ export default function MainHeader() {
             </Link>
           </li>
           <li className="p-2 hover:bg-background/60 rounded-bl-xl rounded-tr-xl">
-            <Link href="/recipes">
+            <Link href="/recipes/recipesOverview">
               Recipes
             </Link>
           </li>

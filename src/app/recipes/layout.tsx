@@ -9,7 +9,7 @@ export default function ReipesLayout({
     <main className="flex flex-row h-screen">
       <SideNav
         navElements={[
-          { href: "/recipes", label: "Overview" },
+          { href: "/recipes/recipesOverview", label: "Overview" },
           { href: "/recipes/addRecipe", label: "Add Recipe" },
         ]}
       />
