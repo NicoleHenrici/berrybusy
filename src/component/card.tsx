@@ -5,6 +5,7 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 type CardProps = {
   sections: Section[];
   pageName: string;
+  mode: "edit" | "view";
   extendListHandler?: (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     section: Section
