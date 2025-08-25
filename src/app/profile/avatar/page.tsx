@@ -28,6 +28,7 @@ export default function AvatarPage() {
         <Card
           sections={settingsSections}
           pageName="Avatar"
+          mode="edit"
         />
         <button type="submit" className="btn m-2 bg-brand-primary p-2 text-white rounded-md">
           <span className="inline-block align-text-top"><FiUpload /></span> Upload

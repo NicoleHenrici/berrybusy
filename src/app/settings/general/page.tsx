@@ -37,6 +37,7 @@ export default function SettingsGeneralPage() {
         <Card
           sections={settingsSections}
           pageName="General Settings"
+          mode="edit"
         />
         <button type="submit" className="btn m-2 bg-brand-primary p-2 text-white rounded-md">Save Changes</button>
       </form>

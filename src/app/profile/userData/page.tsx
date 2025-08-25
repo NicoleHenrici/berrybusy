@@ -27,6 +27,7 @@ export default function UserDataPage() {
         <Card
           sections={settingsSections}
           pageName="User Data Settings"
+          mode="edit"
         />
         <button type="submit" className="btn m-2 bg-brand-primary p-2 text-white rounded-md">Save Changes</button>
       </form>

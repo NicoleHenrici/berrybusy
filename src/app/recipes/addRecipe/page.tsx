@@ -89,6 +89,7 @@ export default function AddRecipePage() {
                     pageName="Add Recipe"
                     extendListHandler={extendListHandler}
                     onDeleteListElement={onDeleteListElement}
+                    mode="edit"
                 />
                 <button type="submit" className="btn m-2 bg-brand-primary p-2 text-white rounded-md">Save Recipe</button>
             </form>
